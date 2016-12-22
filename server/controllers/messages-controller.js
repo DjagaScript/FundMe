@@ -57,7 +57,6 @@ module.exports = function ({data}) {
                     });
                 });
         },
-
         addMessage(req, res) {
             let identification = req.body.identification;
             let text = req.body.text;

@@ -11,6 +11,8 @@ $('.open-conversation').on('click', function (e) {
 
     requester.postJSON('/messages/texts', body, '')
         .then((result) => {
+            console.log('here1');
+            
             appendTexts(result.texts, result.loggedUser)
         })
 });
@@ -75,6 +77,8 @@ $('#send-message').on('click', function (e) {
 
     requester.putJSON('/messages', body, '')
         .then((result) => {
+            console.log('here22');
+            
             appendTexts(result.texts, result.loggedUser)
             $('#messageToSend').val('')
         })

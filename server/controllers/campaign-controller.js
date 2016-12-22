@@ -8,6 +8,8 @@ module.exports = function ({ grid, data, database }) {
             let pageSize = 5;
             data.getAllCampaigns(pageNumber, pageSize)
                 .then(campaigns => {
+                    console.log(campaigns);
+                    
                     res.status(200).render('campaigns/all-campaigns', {
                         result: {
                             campaigns,

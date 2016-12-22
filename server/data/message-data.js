@@ -33,7 +33,6 @@ module.exports = function (models) {
             });
 
         },
-
         findByIdentification(identification) {
             return new Promise((resolve, reject) => {
                 Message.findOne({ 'identification': identification }, (err, message) => {
